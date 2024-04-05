@@ -79,10 +79,11 @@ def person (radius,gender):
     skin_colors = ['AntiqueWhite', 'chocolate4', 'LightSalmon', 'tan']
     hair_colors = ['SaddleBrown', 'black', 'red4', 'snow3', 'lemonchiffon', 'burlywood']
     shirt_colors = ['coral1', 'maroon4', 'CadetBlue', 'DarkSeaGreen', 'Lightgoldenrod1', 'LightPink']
+    chosen_skin_color = random.choice(skin_colors)
 
     speed(0)
     pencolor(random.choice(shirt_colors))
-    fillcolor(random.choice(shirt_colors))
+    fillcolor(chosen_skin_color)
     begin_fill()
     forward(radius)
     left(90)
@@ -165,6 +166,8 @@ def person (radius,gender):
         right(90)
         forward(radius*.75)
         end_fill()
+
+    pendown()
 
 
 ##################   DICTIONARIES AND LISTS   ##################
@@ -300,6 +303,7 @@ Locations = {
 
 ##################   PROGRAM START   ##################
 
+
 # Introduction
 formatting()
 write_story(introduction_lines, 'gray')
@@ -314,10 +318,10 @@ goto(0,0)
 setheading(0)
 pendown()
 
-if '1' or 'alone' in start.lower():
+if int(start) == 1: 
     person(25,'female')
 
-elif '2' or 'partner' in start.lower():
+elif int(start) == 2: #'2' or 'partner' in start.lower():
     penup()
     back(25)
     pendown()
@@ -328,7 +332,7 @@ elif '2' or 'partner' in start.lower():
     person(25,'male')
 
 
-elif '3' or 'girls' in start.lower():
+elif int(start) == 3: #'3' or 'girls' in start.lower():
     penup()
     back(75*2.5)
     pendown()
@@ -338,7 +342,7 @@ elif '3' or 'girls' in start.lower():
         forward(75)
         pendown()
  
-elif '4' or 'kids' in start.lower():
+elif int(start) == 4: #'4' or 'kids' in start.lower():
     penup()
     back(25)
     pendown()
