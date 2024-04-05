@@ -369,7 +369,5 @@ def person (radius,gender):
         end_fill()
 
 
-
-person(50, 'other')
-
+flight(100, 'black')
 done()

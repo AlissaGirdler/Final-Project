@@ -63,8 +63,7 @@ def place (location,x,y):
     screen = Screen()
     
     # Register shapes from the dictionary
-    for location, file_path in Locations.items():
-        screen.addshape(file_path)
+    screen.addshape(Locations[location])
 
     # Create a turtle and set its shape to the registered GIF shape
     gif_turtle = Turtle()

@@ -27,6 +27,6 @@ def place (location,x,y):
     gif_turtle.penup()
     gif_turtle.goto(x,y)
 
-place('Madison', 0,0)
+place('Outer Banks', 0,0)
 
 done()
