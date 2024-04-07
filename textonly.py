@@ -1,21 +1,7 @@
-from turtle import *
 import math
 import random
-import time
 
-storyline = {
-    "Introduction":
-        "\n\
-        On Sunday night Taylor's phone pings with an urgent email.\n\
-        As Taylor reads, her jaw drops in surprise. \n\
-        There is a major network failure at work that will take all week to fix, \n\
-        All staff have been given the week off. \n\
-        \n\
-        Taylor is over the moon, \n\
-        she has been wanting to go on vacation for months. \n\
-        This week off is her chance,\n\
-        Taylor needs your help to plan her last minute trip.\n",
-    
+Level_1_Storyline = {
     "Level_1_Introduction":
         "\n\
         Taylor loves the idea of going with her family\n\
@@ -29,36 +15,92 @@ storyline = {
             4. with her kids  \n\
         Enter your choice:",
 
-    "Level_1_Solo": " ",
+    "Level_1_Solo_Option_Response": "\n\
+        Excellent! \n\
+        Taylor is in need of some self care time\n\
+        she thinks to herself...\n\
+        'Should I commit to a BIG trip and go international\n\
+        or will staying domestic feel like a getaway?'",
 
-    "Level_1_Couples": " ",
+    "Level_1_Couples_Option_Response": "\n\
+        My husband and I never even went on a honeymoon,\n\
+        it's definitely time for some time together.\n\
+        Taylor wonders thinks 'I could book the tickets\n\
+        and surprise him tonight but...\n\
+        would he prefer romance or adventure?'",
 
-    "Level_1_Girls": " ",
+    "Level_1_Girls_Option_Response" : "\n\
+        Yesssssssss!\n\
+        I am calling my girls right now!",
 
-    "Level_2_Kids": " ",
-
-    "Exit": "Bon voyage Tay Tay! Exiting...",
-
-    "Invalid_Entry": "Invalid entry, please enter a numeric value or type 'Exit' to end the program"
-
+    "Level_1_Kids_Option_Response": "\n\
+        Hmmmm, okay...Taylor can pull this off,\n\
+        travelling with two toddlers last minute - NO BIG DEAL!"
 }
 
-print(storyline["Introduction"])
+Level_2_Storyline = {
+    "Level_2_Solo_Domestic/International_Option": "\n\
+        Should Taylor go: \n\
+            1. domestic \n\
+            2. international \n\
+        Enter your choice:",
 
-print(storyline["Level_1_Introduction"])
-Level_1_Option = input(storyline['Level_1_Option'])
+    "Level_2_Solo_Domestic_Response": "\n\
+        This is going to take some though\n\
+        Taylor is thinking something simple, sunny and calm.\n\
+        Outer Banks, North Carolina!",
 
-if int(Level_1_Option) == 1:
-    print(storyline["Level_1_Solo"])
+    "Level_2_Solo_International_Response": "\n\
+        Without a moments hesitation, Taylor yells\n\
+        'I'm going to Japan!'",
 
-elif int(Level_1_Option) == 2:
-    print(storyline["Level_1_Couples"])
+    "Level_2_Solo_Domestic_Travel" : " ",
 
-elif int(Level_1_Option) == 3:
-    print(storyline["Level_1_Girls"])
+    "Level_2_Solo_International_Travel" : " "
+}
 
-elif("exit" in Level_1_Option.lower()):
-    print(storyline["Exit"])
+Misc_Storyline = {
+    "Introduction":
+        "\n\
+        On Sunday night Taylor's phone pings with an urgent email.\n\
+        As Taylor reads, her jaw drops in surprise. \n\
+        There is a major network failure at work that will take all week to fix, \n\
+        All staff have been given the week off. \n\
+        \n\
+        Taylor is over the moon, \n\
+        she has been wanting to go on vacation for months. \n\
+        This week off is her chance,\n\
+        Taylor needs your help to plan her last minute trip.\n",
 
-else:
-    print(storyline["Invalid_Entry"])
+    "Invalid_Entry": "\n\
+        Invalid entry, please enter a numeric \n\
+        value or type 'Exit' to end the program",
+
+    "Exit": "\n\
+        Bon voyage Tay Tay! \n\
+        Exiting...",
+}
+
+print(Misc_Storyline["Introduction"])
+
+def Level_1():
+
+    print(Level_1_Storyline["Level_1_Introduction"])
+    Level_1_Option = input(Level_1_Storyline['Level_1_Option'])
+
+    if int(Level_1_Option) == 1:
+        print(Level_1_Storyline["Level_1_Solo_Option_Response"])
+
+    elif int(Level_1_Option) == 2:
+        print(Level_1_Storyline["Level_1_Couples_Option_Response"])
+
+    elif int(Level_1_Option) == 3:
+        print(Level_1_Storyline["Level_1_Girls_Option_Response"])
+
+    elif("exit" in Level_1_Option.lower()):
+        print(Level_1_Storyline["Exit"])
+
+    else:
+        print(Level_1_Storyline["Invalid_Entry"])
+
+    return Level_1_Option
