@@ -81,7 +81,6 @@ Misc_Storyline = {
         Exiting...",
 }
 
-print(Misc_Storyline["Introduction"])
 
 def Level_1():
 
@@ -104,3 +103,6 @@ def Level_1():
         print(Level_1_Storyline["Invalid_Entry"])
 
     return Level_1_Option
+
+print(Misc_Storyline["Introduction"])
+Level_1()
