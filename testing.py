@@ -4,13 +4,13 @@ import random
 import time
 
 Locations = {
-    "Madison": "C:/Users/aliss/OneDrive/Desktop/LIS 875/Final-Project/Location Photos/7.gif",
-    "Outer Banks": "C:/Users/aliss/OneDrive/Desktop/LIS 875/Final-Project/Location Photos/1.gif",
-    "Tokyo": "C:/Users/aliss/OneDrive/Desktop/LIS 875/Final-Project/Location Photos/2.gif",
-    "Sanoma": "C:/Users/aliss/OneDrive/Desktop/LIS 875/Final-Project/Location Photos/3.gif",
-    "South Africa": "C:/Users/aliss/OneDrive/Desktop/LIS 875/Final-Project/Location Photos/4.gif",
-    "Lake Geneva": "C:/Users/aliss/OneDrive/Desktop/LIS 875/Final-Project/Location Photos/5.gif",
-    "Las Vegas": "C:/Users/aliss/OneDrive/Desktop/LIS 875/Final-Project/Location Photos/6.gif"
+    "Madison": "Location Photos/7.gif",
+    "Outer Banks": "Location Photos/1.gif",
+    "Tokyo": "Location Photos/2.gif",
+    "Sanoma": "Location Photos/3.gif",
+    "South Africa": "Location Photos/4.gif",
+    "Lake Geneva": "Location Photos/5.gif",
+    "Las Vegas": "Location Photos/6.gif"
 }
 
 def place (location,x,y):
