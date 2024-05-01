@@ -15,6 +15,7 @@ pprint(forecast_dict)
 
 
 
+#Lat/Lon for all locations located in the coordinates.txt file. Do we need to create a dictionary to reference each location and the lat/lon?
 #OBX Lat / Long 35.768719 -75.524109
 #Tokyo Lat / Long 35.689487 35.689487
 
