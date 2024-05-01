@@ -18,6 +18,8 @@ Misc_Storyline = {
     "Exit": "\n\
         Bon voyage Tay Tay! \n\
         Exiting...",
+
+    "Ending" : "
 }
 
 Level_1_Storyline = {
@@ -127,7 +129,7 @@ Level_2_Girls_storyline = {
     "Level_2_wild_travel" : " "
 }
 
-Level_3_weather_storyline = {
+Weather_API_storyline = {
     "day five" : "\n\
         Five days into the trip,\n\
         Taylor faces the fact that her trip is coming to an end.\n\
@@ -150,15 +152,79 @@ Level_3_weather_storyline = {
         Taylor can't stand being hot!"
 }
 
-Level_3_solo_domestic_storyline = {}
+Level_3_solo_domestic__Activity_storyline = {
+    
+    "Level_3_Solo_Domestic_Good_Weather_Option" :" ",
+    "Level_3_Solo_Domestic_Beach_Day_Response" :" ",
+    "Level_3_Solo_Domestic_Dune Surfing_Response" :" ",
 
-Level_3_solo_international_storyline ={}
+    
+    "Level_3_Solo_Domestic_Bad_Weather_Response" :" "
+}
 
-Level_3_couples_adventure_storyline = {}
+Level_3_solo_international_storyline ={
+    
+    "Level_3_Solo_International_Good_Weather_Option":" ",
+    "Level_3_Solo_International_Mt_Fuji_Response":" ",
+    "Level_3_Solo_International_Mario_Kart_Response":" ",
 
-Level_3_girls_serene_storyline = {}
+    
+    "Level_3_Solo_International_Bad_Weather_Option":" ",
+    "Level_3_Solo_International_Food_Tourism_Response":" ",
+    "Level_3_Solo_International_Sumo_Wrestling_Response":" "
+}
 
-Level_3_girls_wild_storyline = {}
+Level_3_couples_romantic_storyline = {
+    
+    "Level_3_Couples_Romantic_Good_Weather_Response":" ",
+
+    "Level_3_Couples_Romantic_Bad_Weather_Response":" ",
+}
+
+Level_3_couples_adventure_storyline = {
+    
+    "Level_3_Couples_Adventure_Good_Weather_Option":" ",
+    "Level_3_Couples_Adventure_Shark_Diving_Response:" ",
+    "Level_3_Couples_Adventure_Safari_Response":" ",
+    
+    "Level_3_Couples_Adventure_Bad_Weather_Response":" ",
+}
+
+Level_3_girls_serene_storyline = {
+    
+    "Level_3_girls_serene_weather_response" : " ",
+
+    "Level_3_girls_serene_activity_option" : " ",
+    "Level_3_girls_serene_cheap_response" : " ",
+    "Level_3_girls_serene_expensive_response" : " ", 
+}
+
+Level_3_girls_wild_storyline = {
+
+    "Level_3_girls_wild_good_weather_option" : " ",
+    "Level_3_girls_wild_old_vegas_response" : " ",
+    "Level_3_girls_wild_new_vegas_response" : " ",
+
+    "Level_3_girls_wild_bad_weather_option" : " ",
+    "Level_3_girls_wild_bad_weather_casino_response" : " ",
+    "Level_3_girls_wild_bad_weather_show_response" : " "
+}
+
+
+Flight_Quality_Randomizer = {
+
+    "Perfect_Upgrade" : " ",
+    "Nightmare" : " ",
+    "Just_Fine" : " ",
+    "Pretty_Good" : " "
+}
+
+Level_4_storyline = {
+
+    "Outcome_Option" : " ",
+    "Relaxed_and_Reenergized_Response" : " ",
+    "Exhausted_and_Stressed_Response" : " "
+}
 
 
 
