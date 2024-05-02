@@ -136,6 +136,15 @@ Level_2_Girls_storyline = {
     "Level_2_wild_travel" : " "
 }
 
+Level_2_Kids_Storyline = {
+    "sure" : "\n\
+        Are you sure?\n\
+        There will be a lot to do...",
+    "time" : "\n\
+        Taylor doesn't have time for that.\n\
+        Pick again: "
+}
+
 Weather_API_storyline = {
     "day five" : "\n\
         Five days into the trip,\n\
