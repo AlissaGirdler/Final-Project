@@ -1,3 +1,5 @@
+weather = ['sun','rain']
+
 Locations = {
     "Madison": "Location Photos/7.gif",
     "Outer Banks": "Location Photos/1.gif",
