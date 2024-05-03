@@ -3,6 +3,7 @@ from storyline_dictionaries import *
 from solo_module import *
 from couples_module import *
 from girls_module import *
+from other_dictionaries_and_lists import *
 
 #do we have to put exit function here and also in each module?
 
@@ -24,7 +25,10 @@ elif choice == "3":
     print (Level_1_Storyline["Level_1_Girls_Option_Response"])
 elif choice == "4":
    print (Level_1_Storyline["Level_1_Kids_Option_Response"])
-   #INSERT FUNCTION HERE TO CALL THE LIST AND THEN KICK BACK TO THE START?
+   print (Level_2_Kids_Storyline['sure'])
+   print (travel_checklist) #INSERT BREAK HERE AT SPECIFIC TIME
+   print (Level_2_Kids_Storyline['time'])
+   #INSERT FUNCTION TO KICK BACK TO THE START?
 else:
     print("Invalid choice. Please enter a number from 1 to 4.")
 
