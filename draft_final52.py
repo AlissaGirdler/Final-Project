@@ -1,5 +1,10 @@
+import random
 from storyline_dictionaries import *
 from solo_module import *
+from couples_module import *
+from girls_module import *
+
+#do we have to put exit function here and also in each module?
 
 
 #INTRODUCTION
@@ -12,7 +17,16 @@ choice = input(Level_1_Storyline['Level_1_Option'])
 if choice == "1":
     print(Level_1_Storyline["Level_1_Solo_Option_Response"])
     solo_adventure()
-
+elif choice == "2":
+    print(Level_1_Storyline["Level_1_Couples_Option_Response"])
+    couples_trip()
+elif choice == "3":
+    print (Level_1_Storyline["Level_1_Girls_Option_Response"])
+elif choice == "4":
+   print (Level_1_Storyline["Level_1_Kids_Option_Response"])
+   #INSERT FUNCTION HERE TO CALL THE LIST AND THEN KICK BACK TO THE START?
+else:
+    print("Invalid choice. Please enter a number from 1 to 4.")
 
 
 #add a print statement here to segway into return flight?
