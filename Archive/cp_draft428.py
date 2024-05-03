@@ -253,7 +253,7 @@ def wild_girls():
 #CODE FOR LEG 3 - FAMILY TRIP
 def bring_the_kids():
     print("You've chosen to bring the kids along!")
-    print("Invalid choice. Please enter a number from 1 to 4.")
+    print("Invalid choice. Please enter a number from 1 to 3.")
     start_adventure()
 
 start_adventure()
