@@ -1,11 +1,62 @@
 from turtle import *
 import math
 import random
+from storyline_dictionaries_with_lists import *
 
-setup(height=800, width=1000)
-bgcolor('lightblue2')
+bubble_x = -280
+bubble_y = 375
 
-#draws airplane traveling a flight path with parameters for size and plane color
+#################################### SETUP FUNCTIONS ####################################
+
+# Configure turtle
+def formatting():
+    speed(0)
+    title("Taylor's Vacation")
+    setup(height=800, width=1000)
+    hideturtle()
+
+#################################### WRITE STORY ####################################
+
+# Draws word bubble
+def word_bubble(radius, color):
+
+    bubble_x = -280
+    bubble_y = 375
+
+    speed(0), pencolor(color), fillcolor(color), penup(), goto(bubble_x,bubble_y), pendown()
+    setheading(0), begin_fill(), circle(-radius), end_fill()
+    right(90), forward(radius), right(90), forward(radius/4)
+    setheading(90), begin_fill(), circle((radius*.8)), end_fill()
+    setheading(0), forward(radius/2)
+    setheading(-90), begin_fill(), circle(radius*.8), end_fill()
+    
+    penup(), setheading(0), forward(radius/3), right(90), forward(radius),pendown()
+    begin_fill(), circle(radius/8), end_fill()
+    penup(), forward(radius/4), setheading(0), forward(radius/4), right(90),pendown()
+    begin_fill(), circle(radius/16), end_fill()
+    penup(), forward(radius/8), setheading(0), forward(radius/8), right(90),pendown()
+    begin_fill(), circle(radius/32), end_fill()
+
+def write_story(list_name, color):
+    
+    word_bubble(110,color)
+    
+    speed(1)
+    y = 285 # INCOMPLETE - need to find correct coordinates
+    line_height = 20
+
+    pencolor('black')
+    for item in list_name:
+        penup()
+        goto(bubble_x,y),
+        pendown()
+        write(item, align="center", font=("Arial", 10, "italic"))
+        y -= line_height
+
+
+#################################### TRAVEL FUNCTIONS ####################################
+
+# Draws airplane traveling a flight path with parameters for size and plane color
 def flight(radius, color):
 
     #defines variables used in flight function
@@ -121,38 +172,7 @@ def flight(radius, color):
 
     setheading(0)
 
-#draws cloud with size and color parameters
-def cloud (size, cloud_color):
-    speed(0)
-    pencolor(cloud_color)
-    fillcolor(cloud_color) 
-    begin_fill()   
-    for i in range(2):
-        forward(size)
-        left(90)
-        forward(int(size/6))
-        left(90)
-    end_fill()
-
-    begin_fill(), circle(random.randint(int(size/6), int(size/4))), end_fill()
-    forward(int(size))
-    begin_fill(), circle(random.randint(int(size/6), int(size/4))), end_fill()
-    back(random.randint(int(size/2), int(size/1.2)))
-    begin_fill(), circle(random.randint(int(size/4), int(size/3))), end_fill()
-    forward(random.randint(int(size/4), int(size/2)))
-    begin_fill(), circle (random.randint(int(size/4), int(size/3))), end_fill()
-    end_fill()
-
-#draws an entire cloudy sky to be used in weather generator
-def cloudy_sky():
-    bgcolor('gray')
-    for i in range(random.randint(10,20)):
-        penup()
-        goto(random.randint(-300,250),random.randint(-200,300))
-        pendown()
-        cloud(random.randint(25,100),'white')
-
-#car icon for local trips
+# IN PROGRESS Car drive
 def road_trip(length):
     
     for i in range((length // 6) // 2):
@@ -205,10 +225,68 @@ def road_trip(length):
         forward(2)
         pendown()
 
-#draw sun to be used in weather generator
-def sun (size):
-    
+
+#################################### WEATHER FUNCTIONS ####################################
+
+# Draw cloud
+def cloud (size, cloud_color):
     speed(0)
+    pencolor(cloud_color)
+    fillcolor(cloud_color) 
+    begin_fill()   
+    for i in range(2):
+        forward(size)
+        left(90)
+        forward(int(size/6))
+        left(90)
+    end_fill()
+
+    begin_fill(), circle(random.randint(int(size/6), int(size/4))), end_fill()
+    forward(int(size))
+    begin_fill(), circle(random.randint(int(size/6), int(size/4))), end_fill()
+    back(random.randint(int(size/2), int(size/1.2)))
+    begin_fill(), circle(random.randint(int(size/4), int(size/3))), end_fill()
+    forward(random.randint(int(size/4), int(size/2)))
+    begin_fill(), circle (random.randint(int(size/4), int(size/3))), end_fill()
+    end_fill()
+
+# Draws an entire cloudy sky
+def cloudy_sky():
+    bgcolor('gray')
+    for i in range(random.randint(10,20)):
+        penup()
+        goto(random.randint(-300,250),random.randint(-200,300))
+        pendown()
+        cloud(random.randint(25,100),'white')
+
+# Draw raindrop
+def raindrop ():    
+    
+    blues = ['lightblue','lightblue2','lightblue3','lightblue4']
+
+    right(90)
+    pencolor('gray')
+    color(random.choice(blues))
+    begin_fill()
+    circle(25, 180)
+    left(25)
+    forward(60)
+    left(130)
+    forward(60)       
+    end_fill()
+
+# Draws an entire rainy sky
+def rain():
+    bgcolor('gray')
+    for i in range(random.randint(50,75)):
+        penup()
+        goto(random.randint(-500,400),random.randint(-400,500))
+        setheading(0)
+        pendown()
+        raindrop()
+
+# Draw sun
+def sun (size):
     center = position()
     set_heading = (0)
 
@@ -217,8 +295,9 @@ def sun (size):
     forward(size)
     left(90)
     pendown()
-    fillcolor('yellow')
-    pencolor('yellow')
+    fillcolor('lightgoldenrod2')
+    width(5)
+    pencolor('lightgoldenrod2')
     begin_fill()
     circle(size)
     end_fill()
@@ -229,6 +308,17 @@ def sun (size):
         pendown()
         forward(size * 1.2)
         set_heading += 10
+
+# Draw sunny sky
+def sunny ():
+    bgcolor('lightblue2')
+    penup(), goto(200,200), pendown()
+    sun(50)
+
+
+
+
+
 
 def person (radius):
 
@@ -368,6 +458,17 @@ def person (radius,gender):
         forward(radius*.75)
         end_fill()
 
+Level_2_Couples_Storyline = {
+    "Level_2_Romantic/Adventure_Option": [
+        "Should Taylor plan a trip that is:",
+        "1. Romantic",
+        "2. Adventurous",
+        "Enter your choice:"
+    ],
 
-flight(100, 'black')
+    "Level_2_Romantic_Response": [
+        "A wine country getaway would be perfect.",
+        "Taylor and her partner book a trip to Sanoma."
+    ]}
+
 done()

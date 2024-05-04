@@ -6,57 +6,11 @@ import time
 ##################   VARIABLE LIST   ##################
 
 
-bubble_x = -280
-bubble_y = 375
-
-
-##################   FUNCTION LIST   ##################
-
-
 # Function to clear Python canvas of previous actions based on entered paramater or number of actions that need to be erased
 def clear_actions(num_actions):
     for _ in range(num_actions):
         undo()
 
-# INCOMPLETE Sets up turtle formatting
-def formatting():
-    title("Taylor's Vacation")
-    setup(height=800, width=1000)
-    hideturtle()
-
-#Draws word bubble for text to appear in 
-def word_bubble(radius, color):
-
-    speed(0), pencolor(color), fillcolor(color), penup(), goto(bubble_x,bubble_y), pendown()
-    setheading(0), begin_fill(), circle(-radius), end_fill()
-    right(90), forward(radius), right(90), forward(radius/4)
-    setheading(90), begin_fill(), circle((radius*.8)), end_fill()
-    setheading(0), forward(radius/2)
-    setheading(-90), begin_fill(), circle(radius*.8), end_fill()
-    
-    penup(), setheading(0), forward(radius/3), right(90), forward(radius),pendown()
-    begin_fill(), circle(radius/8), end_fill()
-    penup(), forward(radius/4), setheading(0), forward(radius/4), right(90),pendown()
-    begin_fill(), circle(radius/16), end_fill()
-    penup(), forward(radius/8), setheading(0), forward(radius/8), right(90),pendown()
-    begin_fill(), circle(radius/32), end_fill()
-
-# writes story text from specified dictionary(?) text box
-def write_story(list_name, color):
-    
-    word_bubble(110,color)
-    
-    speed(1)
-    y = 285 # INCOMPLETE - need to find correct coordinates
-    line_height = 20
-
-    pencolor('black')
-    for item in list_name:
-        penup()
-        goto(bubble_x,y),
-        pendown()
-        write(item, align="center", font=("Arial", 10, "italic"))
-        y -= line_height
 
 # shows gif image for trip location and places it on turtle canvas
 def place (location,x,y):
@@ -168,12 +122,6 @@ def person (radius,gender):
 
     pendown()
 
-
-# Introduction
-formatting()
-write_story(introduction_lines, 'gray')
-time.sleep(5)
-write_story(going_away, 'gray')
 
 # User selection - Solo, couples, girls or family trip
 start = textinput("Help Taylor plan their vacation!","Should Taylor go on vacation: \n1. alone. \n2. with her partner. \n3. with her girls. \n4. with her kids.  \nEnter your choice:")
