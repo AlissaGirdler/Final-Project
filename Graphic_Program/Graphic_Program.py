@@ -3,7 +3,7 @@ import random
 from turtle import *
 from Graphic_Program.graphic_functions import *
 from Graphic_Program.storyline_dictionaries_with_lists import *
-from other_dictionaries_and_lists import *
+from Graphic_Program.other_dictionaries_and_lists import *
 
 
 bubble_x = -280

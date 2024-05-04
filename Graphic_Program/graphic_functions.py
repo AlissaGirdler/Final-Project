@@ -1,7 +1,7 @@
 from turtle import *
 import math
 import random
-from Graphic_Program.storyline_dictionaries_with_lists import *
+from storyline_dictionaries_with_lists import *
 from other_dictionaries_and_lists import *
 import time
 
@@ -49,10 +49,14 @@ def write_story(story_dict, key, size, x, y):
         pendown()
         write(item, align="center", font=("Arial", size, "italic"))
         y -= line_height
+        time.sleep(1)
 
 write_story(Misc_Storyline,"title",20,0,0)
 time.sleep(2)
-write_story(Misc_Storyline,"instructions",15,0-20)
+write_story(Misc_Storyline,"directions",12,0,-30)
+time.sleep(2)
+clear()
+write_story(Misc_Storyline,"introduction",15,0,100)
 
 #################################### TRAVEL FUNCTIONS ####################################
 
@@ -430,5 +434,11 @@ def person (radius,gender):
 
     pendown()
 
+def to_do_list ():
+    for _ in range(4):
+        forward(10) 
+        left(90)
+
+    
 
 done()

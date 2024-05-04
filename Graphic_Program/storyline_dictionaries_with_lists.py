@@ -5,7 +5,8 @@ Misc_Storyline = {
     "directions" : ["When prompted, enter numerical values only,",
         "type 'exit' to leave."],
 
-    "introduction" : ["On Sunday night Taylor's phone pings with an urgent email.",
+    "introduction" : [
+        "On Sunday night Taylor's phone pings with an urgent email.",
         "As Taylor reads, her jaw drops in surprise.",
         "There is a major network failure at work that will take all week to fix,",
         "All staff have been given the week off.",
