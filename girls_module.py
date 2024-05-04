@@ -18,15 +18,15 @@ def girls_getaway():
 def serene_girls():
     print(Level_2_Girls_storyline["Level_2_serene_response"])
     print(Level_2_Girls_storyline["Level_2_serene_travel"])
-    print(Level_3_couples_romantic_storyline["Level_3_girls_serene_weather_response"])
+    print(Level_3_girls_serene_storyline["Level_3_girls_serene_weather_response"])
 
-    experience = input(Level_3_couples_romantic_storyline["Level_3_girls_serene_activity_option"])
+    experience = input(Level_3_girls_serene_storyline["Level_3_girls_serene_activity_option"])
 
     if experience == "1":
-        print(Level_3_couples_romantic_storyline["Level_3_girls_serene_cheap_response"])
+        print(Level_3_girls_serene_storyline["Level_3_girls_serene_cheap_response"])
        
     elif experience == "2":
-        print(Level_3_couples_romantic_storyline["Level_3_girls_serene_expensive_response"])
+        print(Level_3_girls_serene_storyline["Level_3_girls_serene_expensive_response"])
     
     else:
         print("Invalid choice. Please enter either 1 or 2.")
