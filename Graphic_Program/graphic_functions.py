@@ -1,8 +1,9 @@
 from turtle import *
 import math
 import random
-from storyline_dictionaries_with_lists import *
+from Graphic_Program.storyline_dictionaries_with_lists import *
 from other_dictionaries_and_lists import *
+import time
 
 bubble_x = -280
 bubble_y = 375
@@ -16,7 +17,7 @@ def formatting():
     hideturtle()
     speed(0)
 
-#################################### WRITE STORY ####################################
+##################################### WRITE STORY ####################################
 
 # Draws word bubble
 def word_bubble(radius, color):
@@ -39,19 +40,19 @@ def word_bubble(radius, color):
     begin_fill(); circle(radius/32); end_fill()
 
 
-def write_story(list_name, size):
+def write_story(story_dict, key, size, x, y):
+    line_height = size * 2
 
-    y = 0 # INCOMPLETE - need to find correct coordinates
-    line_height = size*2
-
-    pencolor('')
-    for item in list_name:
+    for item in story_dict[key]:
         penup()
-        goto(bubble_x,y),
+        goto(x, y)
         pendown()
         write(item, align="center", font=("Arial", size, "italic"))
         y -= line_height
 
+write_story(Misc_Storyline,"title",20,0,0)
+time.sleep(2)
+write_story(Misc_Storyline,"instructions",15,0-20)
 
 #################################### TRAVEL FUNCTIONS ####################################
 
