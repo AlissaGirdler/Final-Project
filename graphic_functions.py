@@ -51,12 +51,6 @@ def write_story(story_dict, key, size, x, y):
         y -= line_height
         time.sleep(1)
 
-write_story(Misc_Storyline,"title",20,0,0)
-time.sleep(2)
-write_story(Misc_Storyline,"directions",12,0,-30)
-time.sleep(2)
-clear()
-write_story(Misc_Storyline,"introduction",15,0,100)
 
 #################################### TRAVEL FUNCTIONS ####################################
 
@@ -440,5 +434,3 @@ def to_do_list ():
         left(90)
 
     
-
-done()
