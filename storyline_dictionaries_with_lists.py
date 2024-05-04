@@ -31,17 +31,17 @@ Misc_Storyline = {
 Level_1_Storyline = {
     "Level_1_Introduction": [
         "Taylor loves the idea of going with her family",
-        "but she also LOVES the idea of travelling alone or with her girlfriends"
+        "but she also LOVES the idea of travelling alone",
+        "or with her girlfriends"
     ],
     
-    "Level_1_Option": [
-        "Should Taylor go on vacation:",
-        "1. alone",
-        "2. with her partner",
-        "3. with her girls",
-        "4. with her kids",
-        "Enter your choice:"
-    ],
+    "Level_1_Option": "\n\
+        Should Taylor go on vacation:\n\
+            1. alone\n\
+            2. with her partner\n\
+            3. with her girls\n\
+            4. with her kids\n\
+        Enter your choice:",
 
     "Level_1_Solo_Option_Response": [
         "Excellent!",
@@ -71,12 +71,11 @@ Level_1_Storyline = {
 }
 
 Level_2_Solo_Storyline = {
-    "Level_2_Domestic/International_Option": [
-        "Should Taylor go:",
-        "1. domestic",
-        "2. international",
-        "Enter your choice:"
-    ],
+    "Level_2_Domestic/International_Option":
+        "Should Taylor go:\n\
+            1. domestic\n\
+            2. international\n\
+        Enter your choice:",
 
     "Level_2_Domestic_Response": [
         "This is going to take some though",
@@ -105,12 +104,11 @@ Level_2_Solo_Storyline = {
 }
 
 Level_2_Couples_Storyline = {
-    "Level_2_Romantic/Adventure_Option": [
-        "Should Taylor plan a trip that is:",
-        "1. Romantic",
-        "2. Adventurous",
-        "Enter your choice:"
-    ],
+    "Level_2_Romantic/Adventure_Option": "\n\
+        Should Taylor plan a trip that is:\n\
+            1. Romantic\n\
+            2. Adventurous\n\
+        Enter your choice:",
 
     "Level_2_Romantic_Response": [
         "A wine country getaway would be perfect.",
@@ -135,18 +133,20 @@ Level_2_Couples_Storyline = {
 }
 
 Level_2_Girls_storyline = {
-    "Level_2_serene/wild_option": [
-        "Should the girls go:",
-        "1. serene",
-        "2. wild",
-        "Enter your choice:"
-    ],
+    "Level_2_serene/wild_option": "\n\
+        Should the girls go:\n\
+            1. serene\n\
+            2. wild\n\
+        Enter your choice: ",
 
-    "Level_2_serene_response": [],
-    "Level_2_wild_response": [],
-    "Level_2_serene_travel": [],
-    "Level_2_wild_travel": []
+    "Level_2_serene_response": ["Oh perfect, I would love a spa day","Let's pop over to Lake Geneva!"],
+    "Level_2_wild_response": ["VEGAS BABY!","I can't wait to let loose!"],
+    "Level_2_serene_travel": ["Lake Geneva is an easy hour an a half drive","Taylor and her friends pile into the car","and are there before they know it."],
+    "Level_2_wild_travel": ["First class tickets booked","the cocktails are fowing and,","they arrive before they know it"]
 }
+
+
+
 
 Level_2_Kids_Storyline = {
     "sure": [
@@ -185,13 +185,12 @@ Weather_API_storyline = {
 
 Level_3_solo_domestic__Activity_storyline = {
 
-    "Level_3_Solo_Domestic_Good_Weather_Option": [
-        "Taylor wakes up to a perfect sunny day.",
-        "Should she go:",
-        "1. to the beach",
-        "2. dune surfing",
-        "Enter your choice:"
-    ],
+    "Level_3_Solo_Domestic_Good_Weather_Option":"\n\
+        Taylor wakes up to a perfect sunny day.\n\
+        Should she go:\n\
+            1. to the beach\n\
+            2. dune surfing\n\
+        Enter your choice:",
 
     "Level_3_Solo_Domestic_Beach_Day_Response": [
         "Taylor spends the day soaking up the sun,",
@@ -212,13 +211,12 @@ Level_3_solo_domestic__Activity_storyline = {
 
 Level_3_solo_international_storyline ={
 
-    "Level_3_Solo_International_Good_Weather_Option": [
-        "The weather in Japan is perfect,",
-        "should Taylor:",
-        "1. climb Mt, Fuji",
-        "2. go on a Mario Kart race around Tokyo",
-        "Enter your choice:"
-    ],
+    "Level_3_Solo_International_Good_Weather_Option": "\n\
+        The weather in Japan is perfect,\n\
+        should Taylor: \n\
+            1. climb Mt, Fuji\n\
+            2. go on a Mario Kart race around Tokyo\n\
+        Enter your choice: ",
 
     "Level_3_Solo_International_Mt_Fuji_Response": [
         "The view from the top of Mt. Fuji is breathtaking.",
@@ -232,13 +230,13 @@ Level_3_solo_international_storyline ={
     ],
 
     
-    "Level_3_Solo_International_Bad_Weather_Option": [
-        "It's raining cats and dogs in Tokyo,",
-        "but Taylor won't let that ruin her day.",
-        "Should she:",
-        "1. eat all day",
-        "2. go to a sumo match"
-    ],
+    "Level_3_Solo_International_Bad_Weather_Option": "\n\
+        It's raining cats and dogs in Tokyo,\n\
+        but Taylor won't let that ruin her day.\n\
+        Should she: \n\
+            1. eat all day\n\
+            2. go to a sumo match\n\
+        Enter your choice: ",
 
     "Level_3_Solo_International_Food_Tourism_Response": [
         "Taylor indulges in sushi, ramen, and tempura,",
@@ -267,14 +265,13 @@ Level_3_couples_romantic_storyline = {
 
 Level_3_couples_adventure_storyline = {
     
-    "Level_3_Couples_Adventure_Good_Weather_Option": [
-        "The weather in Cape Town is perfect for outdoor adventures.",
-        "Taylor and her partner have a choice to make.",
-        "Should they go:",
-        "1. go shark diving",
-        "2. on a safari",
-        "Enter your choice:"
-    ],
+    "Level_3_Couples_Adventure_Good_Weather_Option": "\n\
+        The weather in Cape Town is perfect for outdoor adventures.\n\
+        Taylor and her partner have a choice to make.\n\
+        Should they go:\n\
+            1. go shark diving\n\
+            2. on a safari\n\
+        Enter your choice:",
 
     "Level_3_Couples_Adventure_Shark_Diving_Response:" : [
         "Face to face with sharks, Taylor and her partner",
@@ -305,12 +302,11 @@ Level_3_girls_serene_storyline = {
         "we are going to the spa!"
     ],
 
-    "Level_3_girls_serene_activity_option" : [
-        "Should the girls go cheap or opt for abouji spa?",
-        "1. Cheap",
-        "2. Expensive",
-        "Enter your choice:"
-    ],
+    "Level_3_girls_serene_activity_option" : "\n\
+        Should the girls go cheap or opt for abouji spa?\n\
+            1. Cheap\n\
+            2. Expensive\n\
+        Enter your choice: ",
 
     "Level_3_girls_serene_cheap_response" : [
         "Opting for a cheap spa,",
@@ -328,13 +324,12 @@ Level_3_girls_serene_storyline = {
 
 Level_3_girls_wild_storyline = {
 
-    "Level_3_girls_wild_good_weather_option" : [
-        "The weather is perfect for a stroll outside.",
-        "Should the girls visit old or new Vegas?",
-        "1. Old Vegas",
-        "2. New Vegas",
-        "Enter your choice:"
-    ],
+    "Level_3_girls_wild_good_weather_option" : "\n\
+        The weather is perfect for a stroll outside.\n\
+        Should the girls visit old or new Vegas?\n\
+            1. Old Vegas\n\
+            2. New Vegas\n\
+        Enter your choice: ",
 
     "Level_3_girls_wild_old_vegas_response" : [
         "'ewwwwwwwwwwww!",
@@ -349,13 +344,12 @@ Level_3_girls_wild_storyline = {
         "their way down the strip"
     ],
 
-    "Level_3_girls_wild_bad_weather_option" : [
-        "The weather is not ideal for outdoor adventures.",
-        "Should the girls hit the casinos or catch a show?",
-        "1. Casinos",
-        "2. Show",
-        "Enter your choice:"
-    ],
+    "Level_3_girls_wild_bad_weather_option" : "\n\
+        The weather is not ideal for outdoor adventures.\n\
+        Should the girls hit the casinos or catch a show?\n\
+            1. Casinos\n\
+            2. Show\n\
+        Enter your choice: ",
 
     "Level_3_girls_wild_bad_weather_casino_response" : [
         "Opting for the casinos, the girls enjoy",
@@ -401,13 +395,12 @@ Flight_Quality_Randomizer = {
 
 Level_4_storyline = {
 
-    "Outcome_Option": [
-        "Home at last.",
-        "How did Taylor's vacation leave her feeling?",
-        "1. Relaxed and reenergized",
-        "2. Exhausted and stressed",
-        "Enter your choice:"
-    ],
+    "Outcome_Option": "\n\
+        Home at last.\n\
+        How did Taylor's vacation leave her feeling?\n\
+            1. Relaxed and reenergized\n\
+            2. Exhausted and stressed\n\
+        Enter your choice:",
 
     "Relaxed_and_Reenergized_Response": [
         "Taylor returns home feeling relaxed,",

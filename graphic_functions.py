@@ -15,6 +15,7 @@ def formatting():
     title("Taylor's Vacation")
     setup(height=800, width=1000)
     hideturtle()
+    bgcolor('CadetBlue4')
     speed(0)
 
 ##################################### WRITE STORY ####################################
@@ -43,6 +44,7 @@ def word_bubble(radius, color):
 def write_story(story_dict, key, size, x, y):
     line_height = size * 2
 
+    pencolor('Azure4')
     for item in story_dict[key]:
         penup()
         goto(x, y)
