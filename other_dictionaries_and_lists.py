@@ -1,4 +1,4 @@
-weather = ['sun','rain']
+weather = ['cloudy','rainy','sunny']
 
 Locations = {
     "Madison": "Location Photos/7.gif",

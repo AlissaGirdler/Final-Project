@@ -15,7 +15,7 @@ Misc_Storyline = {
         "This week off is her chance,",
         "Taylor needs your help to plan her last minute trip."],
 
-    "Invalid_Entry": [
+    "invalid_entry": [
         "Invalid entry, please enter a numeric",
         "value or type 'Exit' to end the program"],
 
@@ -185,12 +185,12 @@ Weather_API_storyline = {
 
 Level_3_solo_domestic__Activity_storyline = {
 
-    "Level_3_Solo_Domestic_Good_Weather_Option":"\n\
-        Taylor wakes up to a perfect sunny day.\n\
-        Should she go:\n\
-            1. to the beach\n\
-            2. dune surfing\n\
-        Enter your choice:",
+"Level_3_Solo_Domestic_Good_Weather_Option":"\n\
+    Taylor wakes up to a perfect sunny day.\n\
+    Should she go:\n\
+        1. to the beach\n\
+        2. dune surfing\n\
+    Enter your choice:",
 
     "Level_3_Solo_Domestic_Beach_Day_Response": [
         "Taylor spends the day soaking up the sun,",

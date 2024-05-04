@@ -1,3 +1,4 @@
+import sys
 import math
 import random
 from turtle import *
@@ -5,14 +6,15 @@ from graphic_functions import *
 from storyline_dictionaries_with_lists import *
 from other_dictionaries_and_lists import *
 
-
+formatting()
 
 def solo_adventure():
     penup(), goto(0,0), pendown()
     person(25,'female')
 
+    choice = textinput("User Input",Level_2_Solo_Storyline["Level_2_Domestic/International_Option"])
+    
     word_bubble(110,'white')
-    choice = textinput(Level_2_Solo_Storyline,"Level_2_Domestic/International_Option",12,-280,325)
 
     if choice == "1":
         domestic_solo()
@@ -20,31 +22,46 @@ def solo_adventure():
     elif choice == "2": 
         international_solo()
     
+    elif choice == "Exit":
+        write_story(Misc_Storyline,"Exit",12,-280,280)
+        sys.exit()
+    
     else:
-    write_story(Misc_Storyline,"")
-    solo_adventure()
+        write_story(Misc_Storyline,"invalid_entry",12,-280,280)
+        solo_adventure()
 
-# def domestic_solo():
-#     print(Level_2_Solo_Storyline["Level_2_Domestic_Response"])
-#     print(Level_2_Solo_Storyline["Level_2_Domestic_Travel"])
-#     # Generate random weather (good or bad)
-#     # What is the best way to incorporate the weather API into this?
-#     weather = random.choice(["good", "bad"])
+def domestic_solo():
+    word_bubble(110,'white')
+    write_story(Level_2_Solo_Storyline,"Level_2_Domestic_Response",12,-280,280)
+    clear()
+    word_bubble(110,'white')
+    write_story(Level_2_Solo_Storyline,"Level_2_Domestic_Travel",12,-280,280)
+    clear()
 
-#     if weather == "good":
-#         beach_or_dune = input(Level_3_solo_domestic__Activity_storyline["Level_3_Solo_Domestic_Good_Weather_Option"])
+    random_weather = random.choice(weather)
+
+    if random_weather == "sunny":
+        beach_or_dune = textinput(Level_3_solo_domestic__Activity_storyline["Level_3_Solo_Domestic_Good_Weather_Option"])
+        sunny()
         
-#         if beach_or_dune == "1":
-#             print(Level_3_solo_domestic__Activity_storyline["Level_3_Solo_Domestic_Beach_Day_Response"])
-#         elif beach_or_dune == "2":
-#             print(Level_3_solo_domestic__Activity_storyline["Level_3_Solo_Domestic_Dune_Surfing_Response"])
-#         else:
-#             print("Invalid choice. Please enter either 1 or 2.")
-#             # Repeat the decision point
-#     else:
-#         print (Level_3_solo_domestic__Activity_storyline["Level_3_Solo_Domestic_Bad_Weather_Response"])
+        if beach_or_dune == "1":
+            write_story(Level_3_solo_domestic__Activity_storyline,"Level_3_Solo_Domestic_Beach_Day_Response",12,-280,280)
 
+        elif beach_or_dune == "2":
+            write_story(Level_3_solo_domestic__Activity_storyline,"Level_3_Solo_Domestic_Dune_Surfing_Response",12,-280,280)
+   
+        elif beach_or_dune == "Exit":
+            write_story(Misc_Storyline,"Exit",12,-280,280)
+            sys.exit()
+    
+        else:
+            write_story(Misc_Storyline,"invalid_entry",12,-280,280)
+        
+    
+    else:
+        write_story(Level_3_solo_domestic__Activity_storyline,"Level_3_Solo_Domestic_Bad_Weather_Response",12,-280,280)
 
+domestic_solo()
 
 # def international_solo():
 #     print(Level_2_Solo_Storyline["Level_2_International_Response"])
