@@ -1,35 +1,30 @@
 Misc_Storyline = {
-    "Introduction": [
-        "Welcome to Taylor's Surprise Vacation!",
-        "",
-        "When prompted, enter numerical values only,",
-        "type 'exit' to leave.",
-        "",
-        "On Sunday night Taylor's phone pings with an urgent email.",
+    
+    "title" : ["Welcome to Taylor's Surprise Vacation!"],
+
+    "directions" : ["When prompted, enter numerical values only,",
+        "type 'exit' to leave."],
+
+    "introduction" : ["On Sunday night Taylor's phone pings with an urgent email.",
         "As Taylor reads, her jaw drops in surprise.",
         "There is a major network failure at work that will take all week to fix,",
         "All staff have been given the week off.",
-        "",
         "Taylor is over the moon,",
         "she has been wanting to go on vacation for months.",
         "This week off is her chance,",
-        "Taylor needs your help to plan her last minute trip."
-    ],
+        "Taylor needs your help to plan her last minute trip."],
 
     "Invalid_Entry": [
         "Invalid entry, please enter a numeric",
-        "value or type 'Exit' to end the program"
-    ],
+        "value or type 'Exit' to end the program"],
 
     "Exit": [
         "Bon voyage Tay Tay!",
-        "Exiting..."
-    ],
+        "Exiting..."],
 
     "Ending": [
         "Either way,",
-        "it's time to get back to work!"
-    ]
+        "it's time to get back to work!"]
 }
 
 Level_1_Storyline = {

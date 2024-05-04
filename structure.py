@@ -3,29 +3,6 @@ import math
 import random
 import time
 
-##################   VARIABLE LIST   ##################
-
-
-# Function to clear Python canvas of previous actions based on entered paramater or number of actions that need to be erased
-def clear_actions(num_actions):
-    for _ in range(num_actions):
-        undo()
-
-
-# shows gif image for trip location and places it on turtle canvas
-def place (location,x,y):
-    screen = Screen()
-    
-    # Register shapes from the dictionary
-    screen.addshape(Locations[location])
-
-    # Create a turtle and set its shape to the registered GIF shape
-    gif_turtle = Turtle()
-    gif_turtle.shape(Locations[location])
-
-    # Move the turtle around to see the GIF
-    gif_turtle.penup()
-    gif_turtle.goto(x,y)
     
 def person (radius,gender):
     
@@ -141,6 +118,7 @@ elif int(start) == 2: #'2' or 'partner' in start.lower():
     person(25,'female')
     penup()
     forward(75)
+    setheading(0)
     pendown()
     person(25,'male')
 
