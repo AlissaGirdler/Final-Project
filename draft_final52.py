@@ -3,7 +3,7 @@ from storyline_dictionaries import *
 from solo_module import *
 from couples_module import *
 from girls_module import *
-from Graphic_Program.other_dictionaries_and_lists import *
+from other_dictionaries_and_lists import *
 
 #do we have to put exit function here and also in each module?
 

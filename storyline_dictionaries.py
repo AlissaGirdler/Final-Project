@@ -127,13 +127,23 @@ Level_2_Girls_storyline = {
             2. wild\n\
         Enter your choice: ",
 
-    "Level_2_serene_response":" ", 
+    "Level_2_serene_response":"\n\
+        Oh perfect, I would love a spa day\n\
+        Let's pop over to Lake Geneva!", 
 
-    "Level_2_wild_response" : " ",
+    "Level_2_wild_response" : "\n\
+        VEGAS BABY!\n\
+        I can't wait to let loose!",
 
-    "Level_2_serene_travel" : " ",
+    "Level_2_serene_travel" : "\n\
+        Lake Geneva is an easy hour an a half drive.\n\
+        Taylor and her friends pile into the car\n\
+        and are there before they know it.",
 
-    "Level_2_wild_travel" : " "
+    "Level_2_wild_travel" : "\n\
+        First class tickets booked,\n\
+        the cocktails are fowing and,\n\
+        they arrive before they know it"
 }
 
 Level_2_Kids_Storyline = {
