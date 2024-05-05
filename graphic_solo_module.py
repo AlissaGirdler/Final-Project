@@ -29,6 +29,8 @@ def solo_adventure():
         write_story(Misc_Storyline,"invalid_entry",12,-280,280)
         solo_adventure() # PUNCH LIST add while true loop
 
+
+
 def domestic_solo():
 
     bgcolor('white')

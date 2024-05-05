@@ -275,7 +275,7 @@ def cloudy():
         pendown()
         setheading(0)
         cloud(random.randint(25,100),'white')
-        
+
 # Draw raindrop
 def raindrop ():    
     
@@ -492,7 +492,32 @@ def person (radius,gender):
 
     pendown()
 
+def couple ():
+    penup(), goto(-40,0), pendown(), setheading(0)
+    person(30,'female')
+    penup(), goto(40,0), pendown(), setheading(0)
+    person(32,'male')
+    heart()
+
+
 def to_do_list ():
     for _ in range(4):
         forward(10) 
         left(90)
+
+def heart ():
+    penup(), goto(0,-50), pendown(), setheading(0)
+    pencolor('IndianRed4')
+    fillcolor('IndianRed4')
+    begin_fill()
+    left(140)
+    forward(60)
+    circle(-30,200)
+    left(120)
+    circle(-30,200)
+    forward(60)
+    end_fill()
+
+speed(6)
+couple()
+done()

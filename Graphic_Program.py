@@ -6,7 +6,7 @@ from storyline_dictionaries_with_lists import *
 from other_dictionaries_and_lists import *
 from graphic_introduction import *
 from graphic_solo_module import *
-
+from graphic_couples_module import *
 
 bubble_x = -280
 bubble_y = 375
@@ -27,7 +27,7 @@ if choice == "1":
     solo_adventure()
 
 elif choice == "2":
-    solo_adventure()
+    couples_trip()
 
 #elif choice == "3":
 
