@@ -500,11 +500,6 @@ def couple ():
     heart()
 
 
-def to_do_list ():
-    for _ in range(4):
-        forward(10) 
-        left(90)
-
 def heart ():
     penup(), goto(0,-50), pendown(), setheading(0)
     pencolor('IndianRed4')
@@ -517,4 +512,54 @@ def heart ():
     circle(-30,200)
     forward(60)
     end_fill()
+
+def notebook():
+    penup(), goto(-200,400), pendown(), pencolor('MintCream'),fillcolor('MintCream'), begin_fill(), setheading(0)
+    for i in range(2):
+        forward(400)
+        right(90)
+        forward(800)
+        right(90)
+    end_fill()
+
+    penup(), goto(-150,400), pendown(), pencolor('pink'), width(3), setheading(-90), forward(800)
+
+    penup(), goto(-140,315), pencolor('CadetBlue4'),setheading(0)
+    write("TO DO LIST", font=("Arial", 20, "italic"))
+
+
+
+    y = 300
+
+    for item in travel_checklist:
+        line_height = 15
+
+        width(1)
+        speed(0)
+
+
+
+        pencolor('CadetBlue4')
+        penup()
+        goto(-140, y)
+        pendown()
+
+        pencolor('black')
+        for i in range(4):
+            forward(10)
+            left(90)
+        penup()
+        forward(15)
+        pendown()
+
+        write(item, font=("Arial", 8, "italic"))
+        
+        penup()
+        goto(-200, y-2)
+        pendown()
+        pencolor('CadetBlue2')
+        forward(400)
+        
+        y -= line_height
+
 
