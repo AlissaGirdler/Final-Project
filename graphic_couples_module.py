@@ -12,7 +12,7 @@ def couples_trip():
     penup(), goto(0,0), pendown(), setheading(0)
     couple()
     word_bubble(110,'IndianRed4')
-    write_story(Level_1_Storyline,"Level_1_Couples_Option_Response",12,-280,325,'white')
+    write_story(Level_1_Storyline,"Level_1_Couples_Option_Response",12,-280,315,'white')
 
 
     choice = textinput("User Input",Level_2_Couples_Storyline["Level_2_Romantic/Adventure_Option"])
@@ -20,16 +20,18 @@ def couples_trip():
     if choice == "1":
         domestic_couple()
 
-    #elif choice == "2":
- #       international_couple()
+    elif choice == "2":
+       international_couple()
 
-    # elif choice == "Exit":
-    #     write_story(Misc_Storyline,"Exit",12,-280,280)
-    #     sys.exit()
+    elif choice == "Exit":
+        word_bubble(110,'IndianRed4')
+        write_story(Misc_Storyline,"Exit",12,-280,280,'white')
+        sys.exit()
     
-    # else:
-    #     write_story(Misc_Storyline,"invalid_entry",12,-280,280)
-    #     couples_trip() # PUNCH LIST add while true loop
+    else:
+        word_bubble(110,'IndianRed4')
+        write_story(Misc_Storyline,"invalid_entry",12,-280,280,'white')
+        couples_trip() # PUNCH LIST add while true loop
 
 
 
@@ -166,7 +168,7 @@ def international_couple():
 
         if sharkcage_safari == "1":
             word_bubble(110,'IndianRed4')
-            write_story(Level_3_couples_adventure_storyline,"Level_3_Couples_Adventure_Shark_Diving_Response",12,-280,280, 'white')
+            write_story(Level_3_couples_adventure_storyline,"Level_3_Couples_Adventure_Shark_Diving_Response",12,-280,280, 'white') # PUNCH LIST HELP
             activity('Cage Shark',50,-50)
 
 
@@ -186,3 +188,4 @@ def international_couple():
             word_bubble(110,'IndianRed4')
             write_story(Misc_Storyline,"invalid_entry",12,-280,280,'white')
 
+international_couple()
