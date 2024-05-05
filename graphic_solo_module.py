@@ -10,6 +10,8 @@ def solo_adventure():
     bgcolor('white')
     penup(), goto(0,0), pendown(), setheading(0)
     person(25,'female')
+    word_bubble(110,'CadetBlue4')
+    write_story(Level_1_Storyline,"Level_1_Solo_Option_Response",12,-280,325,'white')
 
     choice = textinput("User Input",Level_2_Solo_Storyline["Level_2_Domestic/International_Option"])
 
@@ -33,7 +35,7 @@ def domestic_solo():
     word_bubble(110,'LightGoldenRodYellow')
     write_story(Level_2_Solo_Storyline,"Level_2_Domestic_Response",12,-280,280,'Azure4')
     time.sleep(3)
-    clear()
+    blank_page()
 
    
     place("Outer Banks",300,-250)
@@ -47,7 +49,7 @@ def domestic_solo():
     word_bubble(110,'LightGoldenRodYellow')
     write_story(Level_2_Solo_Storyline,"Level_2_Domestic_Travel",12,-280,280, 'Azure4')
     
-    clear()
+    blank_page()
 
     random_weather = random.choice(weather)
 
@@ -58,7 +60,8 @@ def domestic_solo():
 
         beach_or_dune = textinput("User Input",Level_3_solo_domestic__Activity_storyline["Level_3_Solo_Domestic_Good_Weather_Option"])
         
-        
+        blank_page()
+
         if beach_or_dune == "1":
             word_bubble(110,'LightGoldenRodYellow')
             write_story(Level_3_solo_domestic__Activity_storyline,"Level_3_Solo_Domestic_Beach_Day_Response",12,-280,280, 'Azure4')
@@ -83,6 +86,8 @@ def domestic_solo():
         if random_weather == "cloudy":
 
             cloudy()
+            time.sleep(3)
+            blank_page()
 
             word_bubble(110,'LightGoldenRodYellow')
             write_story(Level_3_solo_domestic__Activity_storyline,"Level_3_Solo_Domestic_Bad_Weather_Response",12,-280,280, 'Azure4')
@@ -91,6 +96,8 @@ def domestic_solo():
         elif random_weather == 'rainy':
 
             rain()
+            time.sleep(3)
+            blank_page()
 
             word_bubble(110,'LightGoldenRodYellow')
             write_story(Level_3_solo_domestic__Activity_storyline,"Level_3_Solo_Domestic_Bad_Weather_Response",12,-280,280, 'Azure4')
@@ -102,7 +109,7 @@ def international_solo():
     write_story(Level_2_Solo_Storyline,"Level_2_International_Response",12,-280,280, 'Azure4')
 
     
-    clear()
+    blank_page()
     place('Tokyo',300,-250)
     time.sleep(3)
     place('Madison',-300,-250)
@@ -123,7 +130,7 @@ def international_solo():
 
         mtfuji_mariokart = textinput("User Input", Level_3_solo_international_storyline['Level_3_Solo_International_Good_Weather_Option'])
 
-        clear()
+        blank_page()
 
         if mtfuji_mariokart == "1":
             word_bubble(110,'LightGoldenRodYellow')
@@ -149,10 +156,11 @@ def international_solo():
         if random_weather == "cloudy":
 
             cloudy()
+            time.sleep(3)
 
             food_sumo = textinput("User Input",Level_3_solo_international_storyline['Level_3_Solo_International_Bad_Weather_Option'])
             
-            clear()
+            blank_page()
 
             if food_sumo == "1":
                 word_bubble(110,'LightGoldenRodYellow')
@@ -167,10 +175,11 @@ def international_solo():
         elif random_weather == "rainy":
 
             cloudy()
+            time.sleep(3)
 
             food_sumo = textinput("User Input",Level_3_solo_international_storyline['Level_3_Solo_International_Bad_Weather_Option'])
             
-            clear()
+            blank_page()
 
             if food_sumo == "1":
                 word_bubble(110,'LightGoldenRodYellow')
@@ -183,4 +192,4 @@ def international_solo():
                 activity('Sumo',50,-50)
     
     time.sleep(3)
-    clear()
+    blank_page()

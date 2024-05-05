@@ -31,13 +31,6 @@ def word_bubble(radius, color):
     setheading(90); begin_fill(); circle((radius*.8)); end_fill()
     setheading(0); forward(radius/2)
     setheading(-90); begin_fill(); circle(radius*.8); end_fill()
-    
-    penup(); setheading(0); forward(radius/3); right(90); forward(radius);pendown()
-    begin_fill(); circle(radius/8); end_fill()
-    penup(); forward(radius/4); setheading(0); forward(radius/4); right(90);pendown()
-    begin_fill(); circle(radius/16); end_fill()
-    penup(); forward(radius/8); setheading(0); forward(radius/8); right(90);pendown()
-    begin_fill(); circle(radius/32); end_fill()
 
 
 def write_story(story_dict, key, size, x, y, pen_color):
@@ -282,8 +275,7 @@ def cloudy():
         pendown()
         setheading(0)
         cloud(random.randint(25,100),'white')
-    blank_page()
-
+        
 # Draw raindrop
 def raindrop ():    
     
@@ -317,7 +309,7 @@ def rain():
         setheading(0)
         pendown()
         raindrop()
-    blank_page()
+    
 
 def blank_page():
     setheading(0)
@@ -372,7 +364,6 @@ def sunny():
     ground()
     penup(), goto(200,200), pendown()
     sun(50)
-    blank_page()
 
 def place (location,x,y):
     screen = Screen()
