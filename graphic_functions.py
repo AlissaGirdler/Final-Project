@@ -12,10 +12,9 @@ bubble_y = 375
 
 # Configure turtle
 def formatting():
-    title("Taylor's Vacation")
+    title("Taylor's Surprise Vacation")
     setup(height=800, width=1000)
     hideturtle()
-    bgcolor('CadetBlue4')
     speed(0)
 
 ##################################### WRITE STORY ####################################
@@ -41,10 +40,10 @@ def word_bubble(radius, color):
     begin_fill(); circle(radius/32); end_fill()
 
 
-def write_story(story_dict, key, size, x, y):
+def write_story(story_dict, key, size, x, y, pen_color):
     line_height = size * 2
 
-    pencolor('Azure4')
+    pencolor(pen_color)
     for item in story_dict[key]:
         penup()
         goto(x, y)
@@ -62,6 +61,11 @@ def flight(radius, color):
     #defines variables used in flight function
     size = radius/5
     distance = 2*math.pi*radius/360
+
+    penup()
+    goto(-300,-145)
+    pendown()
+    setheading(0)
 
     #sets color and formatting
     speed(3)
@@ -227,6 +231,12 @@ def road_trip(length):
 
 
 #################################### WEATHER FUNCTIONS ####################################
+def ground():
+    penup(), goto(-500,-100), pendown()
+    fillcolor('DarkOliveGreen4'), begin_fill()
+    for i in range(2):
+        forward(1000), right(90), forward(250), right(90)
+    end_fill()
 
 # Draw cloud
 def cloud (size, cloud_color):
@@ -251,13 +261,28 @@ def cloud (size, cloud_color):
     end_fill()
 
 # Draws an entire cloudy sky
-def cloudy_sky():
-    bgcolor('gray')
+def cloudy():
+    speed(0)
+    penup()
+    goto(-500,400)
+    setheading(0)
+    pendown()
+    fillcolor('gray')
+    begin_fill()
+    for i in range(2):
+        forward(1000)
+        right(90)
+        forward(500)
+        right(90)
+    end_fill()
+    ground()
     for i in range(random.randint(10,20)):
         penup()
-        goto(random.randint(-300,250),random.randint(-200,300))
+        goto(random.randint(-450,450),random.randint(-100,400))
         pendown()
+        setheading(0)
         cloud(random.randint(25,100),'white')
+    blank_page()
 
 # Draw raindrop
 def raindrop ():    
@@ -268,22 +293,43 @@ def raindrop ():
     pencolor('gray')
     color(random.choice(blues))
     begin_fill()
-    circle(25, 180)
+    circle(15, 180)
     left(25)
-    forward(60)
+    forward(36)
     left(130)
-    forward(60)       
+    forward(36)       
     end_fill()
 
 # Draws an entire rainy sky
 def rain():
-    bgcolor('gray')
+    speed(0), penup(), goto(-500,400), pendown(), fillcolor('lightgray')
+    begin_fill()
+    for i in range(2):
+        forward(1000)
+        right(90)
+        forward(500)
+        right(90)
+    end_fill()
+    ground()
     for i in range(random.randint(50,75)):
         penup()
-        goto(random.randint(-500,400),random.randint(-400,500))
+        goto(random.randint(-500,500),random.randint(-150,400))
         setheading(0)
         pendown()
         raindrop()
+    blank_page()
+
+def blank_page():
+    setheading(0)
+    speed(0), penup(), goto(-500,400), pendown(), fillcolor('white')
+    begin_fill()
+    for i in range(2):
+        forward(1000)
+        right(90)
+        forward(800)
+        right(90)
+    end_fill()
+    
 
 # Draw sun
 def sun (size):
@@ -310,11 +356,23 @@ def sun (size):
         set_heading += 10
 
 # Draw sunny sky
-def sunny ():
-    bgcolor('lightblue2')
+def sunny():
+    speed(0)
+    penup()
+    goto(-500,400)
+    pendown()
+    fillcolor('lightblue')
+    begin_fill()
+    for i in range(2):
+        forward(1000)
+        right(90)
+        forward(500)
+        right(90)
+    end_fill()
+    ground()
     penup(), goto(200,200), pendown()
     sun(50)
-
+    blank_page()
 
 def place (location,x,y):
     screen = Screen()
@@ -330,6 +388,19 @@ def place (location,x,y):
     gif_turtle.penup()
     gif_turtle.goto(x,y)
 
+def activity (activity,x,y):
+    screen = Screen()
+    
+    # Register shapes from the dictionary
+    screen.addshape(Activities[activity])
+
+    # Create a turtle and set its shape to the registered GIF shape
+    gif_turtle = Turtle()
+    gif_turtle.shape(Activities[activity])
+
+    # Move the turtle around to see the GIF
+    gif_turtle.penup()
+    gif_turtle.goto(x,y)
 
 
 def person (radius,gender):
@@ -434,5 +505,3 @@ def to_do_list ():
     for _ in range(4):
         forward(10) 
         left(90)
-
-    

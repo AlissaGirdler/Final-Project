@@ -78,7 +78,7 @@ Level_2_Solo_Storyline = {
         Enter your choice:",
 
     "Level_2_Domestic_Response": [
-        "This is going to take some though",
+        "This is going to take some thought",
         "Taylor is thinking something simple, sunny and calm.",
         "Outer Banks, North Carolina!"
     ],
