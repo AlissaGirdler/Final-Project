@@ -20,23 +20,24 @@ def couples_trip():
     if choice == "1":
         domestic_couple()
 
-    elif choice == "2":
-        international_couple()
+    #elif choice == "2":
+ #       international_couple()
 
-    elif choice == "Exit":
-        write_story(Misc_Storyline,"Exit",12,-280,280)
-        sys.exit()
+    # elif choice == "Exit":
+    #     write_story(Misc_Storyline,"Exit",12,-280,280)
+    #     sys.exit()
     
-    else:
-        write_story(Misc_Storyline,"invalid_entry",12,-280,280)
-        couples_trip() # PUNCH LIST add while true loop
+    # else:
+    #     write_story(Misc_Storyline,"invalid_entry",12,-280,280)
+    #     couples_trip() # PUNCH LIST add while true loop
+
 
 
 
 def domestic_couple():
 
     word_bubble(110,'IndianRed4')
-    write_story(Level_2_Solo_Storyline,"Level_2_Romantic_Response",12,-280,280,'white')
+    write_story(Level_2_Couples_Storyline,"Level_2_Romantic_Response",12,-280,280,'white')
     time.sleep(3)
     blank_page()
 
@@ -49,7 +50,7 @@ def domestic_couple():
     time.sleep(3)
 
     word_bubble(110,'IndianRed4')
-    write_story(Level_2_Solo_Storyline,"Level_2_Romantic_Travel",12,-280,280, 'white')
+    write_story(Level_2_Couples_Storyline,"Level_2_Romantic_Travel",12,-280,280, 'white')
     
     blank_page()
 
@@ -85,25 +86,103 @@ def domestic_couple():
             word_bubble(110,'IndianRed4')
             write_story(Level_3_couples_romantic_storyline,"Level_3_Couples_Romantic_Bad_Weather_Response",12,-280,280, 'white')
             activity("Wine Rain",50,-50)
+    time.sleep(3)
+    blank_page()
 
 
-# def international_couple():
-#     print(Level_2_Couples_Storyline["Level_2_Adventure_Response"])
-#     print(Level_2_Couples_Storyline["Level_2_Adventure_Travel"])
-#     # Generate random weather (good or bad)
-#     weather = random.choice(["good", "bad"])
+def international_couple():
+    word_bubble(110,'IndianRed4')
+    write_story(Level_2_Couples_Storyline,"Level_2_Adventure_Response",12,-280,280, 'white')
 
-#     if weather == "good":
-#         sharkcage_safari = input(Level_3_couples_adventure_storyline["Level_3_Couples_Adventure_Good_Weather_Option"])
+    blank_page()
+    place('South Africa',300,-250)
+    time.sleep(3)
+    place('Madison',-300,-250)
+    time.sleep(3)
 
-#         if sharkcage_safari == "1":
-#             print(Level_3_couples_adventure_storyline["Level_3_Couples_Adventure_Shark_Diving_Response"])
-#         elif sharkcage_safari == "2":
-#             print(Level_3_couples_adventure_storyline["Level_3_Couples_Adventure_Safari_Response"])
-#         else:
-#              print("Invalid choice. Please enter either 1 or 2.")
-#             # Repeat the decision point
+    flight(300,'IndianRed4')
+    time.sleep(3)
+
+    word_bubble(110,'IndianRed4')
+    write_story(Level_2_Couples_Storyline,"Level_2_Adventure_Travel",12,-280,280, 'white')
+
+
+    random_weather = random.choice(weather)
+
+    if random_weather == "sunny":
+        
+        sunny()
+        time.sleep(3)
+
+        sharkcage_safari = textinput("User Input",Level_3_couples_adventure_storyline["Level_3_Couples_Adventure_Good_Weather_Option"])
+
+        blank_page()
+
+        if sharkcage_safari == "1":
+            word_bubble(110,'IndianRed4')
+            write_story(Level_3_couples_adventure_storyline,"Level_3_Couples_Adventure_Shark_Diving_Response",12,-280,280, 'white')
+            activity('Cage Shark',50,-50)
+        
+        
+        elif sharkcage_safari == "2":
+            word_bubble(110,'IndianRed4')
+            write_story(Level_3_couples_adventure_storyline,"Level_3_Couples_Adventure_Safari_Response",12,-280,280, 'white')
+            activity('Safari',50,-50)
+
+
+        elif sharkcage_safari == "Exit":
+
+                    word_bubble(110,'IndianRed4')
+                    write_story(Misc_Storyline,"Exit",12,-280,280,'white')
+                    sys.exit()
+            
+        else:
+            word_bubble(110,'IndianRed4')
+            write_story(Misc_Storyline,"invalid_entry",12,-280,280,'white')
     
-#     else:
-#         print(Level_3_couples_adventure_storyline["Level_3_Couples_Adventure_Bad_Weather_Response"])
+    else:
+
+        if random_weather == "cloudy":
+
+            cloudy()
+            time.sleep(3)
+
+            word_bubble(110,'white')
+            write_story(Level_3_couples_adventure_storyline,"Level_3_Couples_Adventure_Bad_Weather_Response",12,-280,280, 'Azure4')
+
+
+
+        elif random_weather == "rainy":
+
+            cloudy()
+            time.sleep(3)
+
+            word_bubble(110,'white')
+            write_story(Level_3_couples_adventure_storyline,"Level_3_Couples_Adventure_Bad_Weather_Response",12,-280,280, 'Azure4')
+        
+        sharkcage_safari = textinput("User Input",Level_3_couples_adventure_storyline["Level_3_Couples_Adventure_Bad_Weather_Option"])
+
+        blank_page()
+
+        if sharkcage_safari == "1":
+            word_bubble(110,'IndianRed4')
+            write_story(Level_3_couples_adventure_storyline,"Level_3_Couples_Adventure_Shark_Diving_Response",12,-280,280, 'white')
+            activity('Cage Shark',50,-50)
+
+
+        elif sharkcage_safari == "2":
+            word_bubble(110,'IndianRed4')
+            write_story(Level_3_couples_adventure_storyline,"Level_3_Couples_Adventure_Safari_Response",12,-280,280, 'white')
+            activity('Safari',50,-50)
+
+
+        elif sharkcage_safari == "Exit":
+
+            word_bubble(110,'IndianRed4')
+            write_story(Misc_Storyline,"Exit",12,-280,280,'white')
+            sys.exit()
+
+        else:
+            word_bubble(110,'IndianRed4')
+            write_story(Misc_Storyline,"invalid_entry",12,-280,280,'white')
 

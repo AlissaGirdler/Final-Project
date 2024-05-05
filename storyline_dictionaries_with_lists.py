@@ -287,12 +287,15 @@ Level_3_couples_adventure_storyline = {
 
     
     "Level_3_Couples_Adventure_Bad_Weather_Response": [
-        "It's stormy in Cape Town, but Taylor and her partner",
-        "embrace the adventure and decide to either:",
-        "1. go shark diving",
-        "2. go on a safari",
-        "Enter your choice:"
-    ]
+        "It's stormy in Cape Town, but Taylor and",
+        "her partner decide to embrace the adventure!"
+    ],
+
+    "Level_3_Couples_Adventure_Bad_Weather_Option": "\n\
+        Should they go:\n\
+            1. shark diving\n\
+            2. on a safari\n\
+        Enter your choice: "
 }
 
 Level_3_girls_serene_storyline = {

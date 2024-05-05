@@ -518,6 +518,3 @@ def heart ():
     forward(60)
     end_fill()
 
-speed(6)
-couple()
-done()
