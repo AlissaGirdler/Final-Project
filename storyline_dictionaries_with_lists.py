@@ -66,8 +66,15 @@ Level_1_Storyline = {
 
     "Level_1_Kids_Option_Response": [
         "Hmmmm, okay...Taylor can pull this off,",
-        "travelling with two toddlers last minute - NO BIG DEAL!"
-    ]
+        "travelling with two toddlers last minute - NO BIG DEAL!",
+        "Let's write a To Do List"
+    ],
+
+    "Level_1_Kids_Option_Cancel" : [
+        "On second thought",
+        "Taylor can't pull this off",
+        "She needs to pick another option"
+    ] 
 }
 
 Level_2_Solo_Storyline = {

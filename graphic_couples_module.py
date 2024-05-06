@@ -134,9 +134,9 @@ def international_couple():
 
         elif sharkcage_safari == "Exit":
 
-                    word_bubble(110,'IndianRed4')
-                    write_story(Misc_Storyline,"Exit",12,-280,280,'white')
-                    sys.exit()
+            word_bubble(110,'IndianRed4')
+            write_story(Misc_Storyline,"Exit",12,-280,280,'white')
+            sys.exit()
             
         else:
             word_bubble(110,'IndianRed4')

@@ -5,8 +5,6 @@ from storyline_dictionaries_with_lists import *
 from other_dictionaries_and_lists import *
 import time
 
-bubble_x = -280
-bubble_y = 375
 
 #################################### SETUP FUNCTIONS ####################################
 
@@ -16,6 +14,19 @@ def formatting():
     setup(height=800, width=1000)
     hideturtle()
     speed(0)
+
+# Puts turtle canvas back to all white
+def blank_page():
+    setheading(0)
+    speed(0), penup(), goto(-500,400), pendown(), fillcolor('white')
+    begin_fill()
+    for i in range(2):
+        forward(1000)
+        right(90)
+        forward(800)
+        right(90)
+    end_fill()
+
 
 ##################################### WRITE STORY ####################################
 
@@ -32,7 +43,7 @@ def word_bubble(radius, color):
     setheading(0); forward(radius/2)
     setheading(-90); begin_fill(); circle(radius*.8); end_fill()
 
-
+# Writes text from dictionary in word bubble
 def write_story(story_dict, key, size, x, y, pen_color):
     line_height = size * 2
 
@@ -169,36 +180,30 @@ def flight(radius, color):
 
     setheading(0)
 
-# IN PROGRESS Car drive
+# Draws car driving between locations
 def road_trip(length):
     
+    penup()
+    goto(-300,-160)
+    pendown()
+    setheading(0)
+
+    # Draw dotted line
+    width(2), pencolor('black')
     for i in range((length // 6) // 2):
-        forward(4)
-        penup()
-        forward(2)
-        pendown()
+        forward(3), penup(), forward(3), pendown()
     
-    # tires only
-    penup()
-    forward((length/10)/10)
-    pendown()
-    pencolor('black')
-    width((length/10)/11)
-    circle((length/10)/10)
-    penup()
-    forward(((length/10)/10)*8)
-    pendown()
+    # Draws tires only
+    penup(), forward((length/10)/10), pendown(), pencolor('black'), width((length/10)/11)
     circle((length/10)/10)
     
-    width(1)
-    pencolor('red')
-    penup()
-    forward((length/10)/10)
-    left(90)
-    forward((length/10)/10)
-    right(90)
-    pendown()
-    fillcolor('red')
+    penup(), forward(((length/10)/10)*8), pendown()
+    circle((length/10)/10)
+    
+    width(1), pencolor('LightPink3'), penup()
+    forward((length/10)/10), left(90), forward((length/10)/10), right(90), pendown()
+    
+    fillcolor('LightPink3')
     begin_fill()
     forward((length/10)/10)
     left(90)
@@ -206,7 +211,7 @@ def road_trip(length):
     left(90)
     forward(((length/10)/10)*2)
     right(90)
-    circle(((length/10)/10)*6)
+    circle(((length/10)/10)*4,180)
     right(90)
     forward(((length/10)/10)*2)
     left(90)
@@ -215,15 +220,48 @@ def road_trip(length):
     forward((length/10))
     end_fill()
 
-    width(1)
+    # Draw dotted line
+    width(2)
+    pencolor('black')
     for i in range((length // 6) // 2):
-        forward(4)
-        penup()
-        forward(2)
-        pendown()
+        forward(3), penup(), forward(3), pendown()
+
+road_trip(600)
+
+# Shows location photo on the turtle canvas
+def place (location,x,y):
+    screen = Screen()
+    
+    # Register shapes from the dictionary
+    screen.addshape(Locations[location])
+
+    # Create a turtle and set its shape to the registered GIF shape
+    gif_turtle = Turtle()
+    gif_turtle.shape(Locations[location])
+
+    # Move the turtle around to see the GIF
+    gif_turtle.penup()
+    gif_turtle.goto(x,y)
+
+# Shows activity photo on the turtle canvas
+def activity (activity,x,y):
+    screen = Screen()
+    
+    # Register shapes from the dictionary
+    screen.addshape(Activities[activity])
+
+    # Create a turtle and set its shape to the registered GIF shape
+    gif_turtle = Turtle()
+    gif_turtle.shape(Activities[activity])
+
+    # Move the turtle around to see the GIF
+    gif_turtle.penup()
+    gif_turtle.goto(x,y)
 
 
 #################################### WEATHER FUNCTIONS ####################################
+
+# Draws green grass
 def ground():
     penup(), goto(-500,-100), pendown()
     fillcolor('DarkOliveGreen4'), begin_fill()
@@ -231,7 +269,7 @@ def ground():
         forward(1000), right(90), forward(250), right(90)
     end_fill()
 
-# Draw cloud
+# Draws one cloud
 def cloud (size, cloud_color):
     speed(0)
     pencolor(cloud_color)
@@ -276,7 +314,7 @@ def cloudy():
         setheading(0)
         cloud(random.randint(25,100),'white')
 
-# Draw raindrop
+# Draws one raindrop
 def raindrop ():    
     
     blues = ['lightblue','lightblue2','lightblue3','lightblue4']
@@ -309,21 +347,8 @@ def rain():
         setheading(0)
         pendown()
         raindrop()
-    
 
-def blank_page():
-    setheading(0)
-    speed(0), penup(), goto(-500,400), pendown(), fillcolor('white')
-    begin_fill()
-    for i in range(2):
-        forward(1000)
-        right(90)
-        forward(800)
-        right(90)
-    end_fill()
-    
-
-# Draw sun
+# Draws the sun
 def sun (size):
     center = position()
     set_heading = (0)
@@ -347,7 +372,7 @@ def sun (size):
         forward(size * 1.2)
         set_heading += 10
 
-# Draw sunny sky
+# Draws a sunny sky
 def sunny():
     speed(0)
     penup()
@@ -365,35 +390,10 @@ def sunny():
     penup(), goto(200,200), pendown()
     sun(50)
 
-def place (location,x,y):
-    screen = Screen()
-    
-    # Register shapes from the dictionary
-    screen.addshape(Locations[location])
 
-    # Create a turtle and set its shape to the registered GIF shape
-    gif_turtle = Turtle()
-    gif_turtle.shape(Locations[location])
+#################################### PEOPLE FUNCTIONS ####################################
 
-    # Move the turtle around to see the GIF
-    gif_turtle.penup()
-    gif_turtle.goto(x,y)
-
-def activity (activity,x,y):
-    screen = Screen()
-    
-    # Register shapes from the dictionary
-    screen.addshape(Activities[activity])
-
-    # Create a turtle and set its shape to the registered GIF shape
-    gif_turtle = Turtle()
-    gif_turtle.shape(Activities[activity])
-
-    # Move the turtle around to see the GIF
-    gif_turtle.penup()
-    gif_turtle.goto(x,y)
-
-
+# Draws one person
 def person (radius,gender):
     
     skin_colors = ['AntiqueWhite', 'chocolate4', 'LightSalmon', 'tan']
@@ -492,6 +492,7 @@ def person (radius,gender):
 
     pendown()
 
+# Draws a couple
 def couple ():
     penup(), goto(-40,0), pendown(), setheading(0)
     person(30,'female')
@@ -499,7 +500,37 @@ def couple ():
     person(32,'male')
     heart()
 
+# Draws a set of parents with three kids
+def family ():
+    penup(), goto(-40,0), pendown(), setheading(0)
+    person(30,'female')
+    penup(), goto(40,0), pendown(), setheading(0)
+    person(32,'male')
+    penup(), goto(-100,-110), pendown(), setheading(0)
+    person(24,'other')
+    penup(), goto(0,-110), pendown(), setheading(0)
+    person(22,'male')
+    penup(), goto(100,-110), pendown(), setheading(0)
+    person(20,'female')
 
+# Draws a group of four girls
+def girls():
+    penup(), goto(-100,0), pendown(), setheading(0)
+    person(30,'female')
+
+    penup(), goto(-33,0), pendown(), setheading(0)
+    person(30,'other')
+
+    penup(), goto(33,0), pendown(), setheading(0)
+    person(30,'female')
+
+    penup(), goto(100,0), pendown(), setheading(0)
+    person(30,'other')
+
+
+#################################### MISC FUNCTIONS ####################################
+
+# Draws a heart for the couples function
 def heart ():
     penup(), goto(0,-50), pendown(), setheading(0)
     pencolor('IndianRed4')
@@ -513,6 +544,7 @@ def heart ():
     forward(60)
     end_fill()
 
+# Draws the travel checklist to do list
 def notebook():
     penup(), goto(-200,400), pendown(), pencolor('MintCream'),fillcolor('MintCream'), begin_fill(), setheading(0)
     for i in range(2):
