@@ -1,4 +1,4 @@
-weather = ['sun','rain']
+weather = ['cloudy','rainy','sunny']
 
 Locations = {
     "Madison": "Location Photos/7.gif",
@@ -8,6 +8,26 @@ Locations = {
     "South Africa": "Location Photos/4.gif",
     "Lake Geneva": "Location Photos/5.gif",
     "Las Vegas": "Location Photos/6.gif"
+}
+
+Activities = {
+    "Beach Day" : "Activities/Beach Day.gif",
+    "Cage Shark" : "Activities/Cage Shark.gif",
+    "Casino" : "Activities/Casino.gif",
+    "Cheap Spa" : "Activities/Cheap Spa.gif",
+    "Dune Surfing" : "Activities/Dune Surfing.gif",
+    "Expensive Spa" : "Activities/xpensive Spa.gif",
+    "Food Tourism" : "Activities/Food Tourism.gif",
+    "Mario Kart" : "Activities/Mario Kart.gif",
+    "Mt Fuji" : "Activities/Mt Fuji.gif",
+    "New Strip" : "Activities/New Strip.gif",
+    "Old Strip" : "Activities/Old Strip.gif",
+    "Safari" : "Activities/Safari.gif",
+    "Show" : "Activities/Show.gif",
+    "Sumo" : "Activities/Sumo.gif",
+    "Wine Rain" : "Activities/Wine Rain.gif",
+    "Wine Sun" : "Activities/Wine Sun.gif",
+    "Wright Museum" :"Activities/Wright Museum.gif"
 }
 
 travel_checklist = [

@@ -15,7 +15,7 @@ Misc_Storyline = {
         "This week off is her chance,",
         "Taylor needs your help to plan her last minute trip."],
 
-    "Invalid_Entry": [
+    "invalid_entry": [
         "Invalid entry, please enter a numeric",
         "value or type 'Exit' to end the program"],
 
@@ -66,8 +66,15 @@ Level_1_Storyline = {
 
     "Level_1_Kids_Option_Response": [
         "Hmmmm, okay...Taylor can pull this off,",
-        "travelling with two toddlers last minute - NO BIG DEAL!"
-    ]
+        "travelling with two toddlers last minute - NO BIG DEAL!",
+        "Let's write a To Do List"
+    ],
+
+    "Level_1_Kids_Option_Cancel" : [
+        "On second thought",
+        "Taylor can't pull this off",
+        "She needs to pick another option"
+    ] 
 }
 
 Level_2_Solo_Storyline = {
@@ -78,7 +85,7 @@ Level_2_Solo_Storyline = {
         Enter your choice:",
 
     "Level_2_Domestic_Response": [
-        "This is going to take some though",
+        "This is going to take some thought",
         "Taylor is thinking something simple, sunny and calm.",
         "Outer Banks, North Carolina!"
     ],
@@ -185,12 +192,12 @@ Weather_API_storyline = {
 
 Level_3_solo_domestic__Activity_storyline = {
 
-    "Level_3_Solo_Domestic_Good_Weather_Option":"\n\
-        Taylor wakes up to a perfect sunny day.\n\
-        Should she go:\n\
-            1. to the beach\n\
-            2. dune surfing\n\
-        Enter your choice:",
+"Level_3_Solo_Domestic_Good_Weather_Option":"\n\
+    Taylor wakes up to a perfect sunny day.\n\
+    Should she go:\n\
+        1. to the beach\n\
+        2. dune surfing\n\
+    Enter your choice:",
 
     "Level_3_Solo_Domestic_Beach_Day_Response": [
         "Taylor spends the day soaking up the sun,",
@@ -287,12 +294,15 @@ Level_3_couples_adventure_storyline = {
 
     
     "Level_3_Couples_Adventure_Bad_Weather_Response": [
-        "It's stormy in Cape Town, but Taylor and her partner",
-        "embrace the adventure and decide to either:",
-        "1. go shark diving",
-        "2. go on a safari",
-        "Enter your choice:"
-    ]
+        "It's stormy in Cape Town, but Taylor and",
+        "her partner decide to embrace the adventure!"
+    ],
+
+    "Level_3_Couples_Adventure_Bad_Weather_Option": "\n\
+        Should they go:\n\
+            1. shark diving\n\
+            2. on a safari\n\
+        Enter your choice: "
 }
 
 Level_3_girls_serene_storyline = {
