@@ -403,6 +403,22 @@ Flight_Quality_Randomizer = {
     ]
 }
 
+Driving_Quality_Randomizer = {
+    "Smooth_Ride": [
+        "Taylor enjoys a smooth ride",
+        "with clear roads and no traffic.",
+        "The drive is relaxing and stress-free,",
+        "allowing her to enjoy the scenery."
+    ],
+
+    "Traffic_Jam": [
+        "The girls get stuck in a traffic jam,",
+        "adding hours to their journey-",
+        "super frustrating!"
+    ]
+}
+
+
 Level_4_storyline = {
 
     "Outcome_Option": "\n\

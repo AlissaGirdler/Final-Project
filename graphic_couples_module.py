@@ -188,4 +188,3 @@ def international_couple():
             word_bubble(110,'IndianRed4')
             write_story(Misc_Storyline,"invalid_entry",12,-280,280,'white')
 
-international_couple()

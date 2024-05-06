@@ -180,6 +180,126 @@ def flight(radius, color):
 
     setheading(0)
 
+def return_flight(radius, color):
+
+    # defines variables used in flight function
+    size = radius / 5
+    distance = 2 * math.pi * radius / 360
+
+    penup()
+    goto(300, -145)  # Start from the right side
+    pendown()
+    setheading(120)  # Set heading to the left
+
+    # sets color and formatting
+    speed(3)
+    pencolor(color)
+    fillcolor(color)
+
+    # angel's flight path
+    left(30)
+    speed(3)
+    width(3)
+    pencolor('gray')
+
+    for i in range(5):
+        pendown()
+        forward(distance * 2)
+        penup()
+        left(1)  # Change right() to left()
+        forward(distance * 2)
+        left(1)  # Change right() to left()
+
+    current_position = pos()
+    set_heading = heading()
+    speed(0)
+
+    # draws airplane body
+    begin_fill()
+    setheading(set_heading)
+    left(90)
+    forward(size / 20)
+    right(88)
+    forward(size)
+    circle(-(size / 2.5), 40)  # Change circle() direction
+    goto(current_position)
+    setheading(set_heading)
+    right(90)
+    forward(size / 20)
+    left(88)
+    forward(size)
+    circle((size / 2.5), 40)  # Change circle() direction
+    end_fill()
+
+    # draw right tail
+    begin_fill()
+    goto(current_position)
+    setheading(set_heading)
+    left(110)  # Change right() to left()
+    forward(size / 5)
+    right(95)  # Change left() to right()
+    forward(size / 20)
+    right(75)  # Change left() to right()
+    forward(size / 4)
+    end_fill()
+
+    # draw left tail
+    begin_fill()
+    goto(current_position)
+    setheading(set_heading)
+    right(110)  # Change left() to right()
+    forward(size / 5)
+    left(95)  # Change right() to left()
+    forward(size / 20)
+    left(75)  # Change right() to left()
+    forward(size / 4)
+    end_fill()
+
+    # draw right wing
+    begin_fill()
+    goto(current_position)
+    setheading(set_heading)
+    forward(size / 1.6)
+    right(110)  # Change left() to right()
+    forward(size / 1.66)
+    left(95)  # Change right() to left()
+    forward(size / 20)
+    left(75)  # Change right() to left()
+    forward(size / 1.33)
+    end_fill()
+
+    # draw left wing
+    begin_fill()
+    goto(current_position)
+    setheading(set_heading)
+    forward(size / 1.6)
+    left(110)  # Change right() to left()
+    forward(size / 1.66)
+    right(95)  # Change left() to right()
+    forward(size / 20)
+    right(75)  # Change left() to right()
+    forward(size / 1.33)
+    end_fill()
+
+    # draws remaining flight path
+    goto(current_position)
+    setheading(set_heading)
+    forward(size + (size / 2.5))
+    left(10)  # Change right() to left()
+    speed(3)
+    width(3)
+    pencolor('gray')
+
+    for i in range(22):
+        pendown()
+        forward(distance * 2)
+        penup()
+        left(1)  # Change right() to left()
+        forward(distance * 2)
+        left(1)  # Change right() to left()
+
+    setheading(0)
+
 # Draws car driving between locations
 def road_trip(length):
     
@@ -220,13 +340,59 @@ def road_trip(length):
     forward((length/10))
     end_fill()
 
+
     # Draw dotted line
     width(2)
     pencolor('black')
     for i in range((length // 6) // 2):
         forward(3), penup(), forward(3), pendown()
 
-road_trip(600)
+def return_road_trip(length):
+    penup()
+    goto(300,-160)
+    pendown()
+    setheading(180)
+
+    # Draw dotted line
+    width(2), pencolor('black')
+    for i in range((length // 6) // 2):
+        forward(3), penup(), forward(3), pendown()
+
+    # Draws tires only
+    penup(), forward((length/10)/10), pendown(), pencolor('black'), width((length/10)/11)
+    circle(-(length/10)/10)
+    
+    penup(), forward(((length/10)/10)*8), pendown()
+    circle(-(length/10)/10)
+
+    setheading(0), penup(), forward(((length/10)/10)*8), pendown()
+
+    width(1), pencolor('LightPink3'), penup()
+    forward((length/10)/10), left(90), forward((length/10)/10), right(90), pendown()
+    
+    fillcolor('LightPink3')
+    begin_fill()
+    forward((length/10)/10)
+    left(90)
+    forward(((length/10)/10)*2)
+    left(90)
+    forward(((length/10)/10)*2)
+    right(90)
+    circle(((length/10)/10)*4,180)
+    right(90)
+    forward(((length/10)/10)*2)
+    left(90)
+    forward(((length/10)/10)*2)
+    left(90)
+    forward((length/10))
+    end_fill()
+
+    penup(), right(90), forward(((length/10)/10)*2), setheading(180), forward((length/10)), pendown()
+    # Draw dotted line
+    width(2)
+    pencolor('black')
+    for i in range((length // 6) // 2):
+        forward(3), penup(), forward(3), pendown()
 
 # Shows location photo on the turtle canvas
 def place (location,x,y):
