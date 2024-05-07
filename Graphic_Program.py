@@ -16,7 +16,7 @@ bubble_y = 375
 formatting()
 
 # INTRODUCTION
-introduction()
+#introduction()
 
 # LEVEL 1 
 write_story(Level_1_Storyline,"Level_1_Introduction", 20, 0, 20,'white')
@@ -44,6 +44,7 @@ while True:
         write_story(Level_1_Storyline,"Level_1_Kids_Option_Response",12,-280,325,'white')
         time.sleep(3)
         notebook()
+        word_bubble(110,'DarkSeaGreen')
         write_story(Level_1_Storyline,"Level_1_Kids_Option_Response",12,-280,325,'white')
 
     elif choice == "Exit":
@@ -58,6 +59,7 @@ while True:
     
 
 # RETURN TRAVEL QUALITY
+blank_page()
 if choice == "3":
     
     random_drive = random.choice(list(Driving_Quality_Randomizer.keys()))
@@ -73,16 +75,16 @@ if choice == "3":
 else: 
     random_flight = random.choice(list(Flight_Quality_Randomizer.keys()))
 
-    # Use the randomly chosen key in the write_story function
-    word_bubble(110,'CadetBlue4')
-    write_story(story_dict=Flight_Quality_Randomizer, key=random_flight, size=12, x=-280, y=325, pen_color='white')
-
     blank_page()
     return_flight(400,'black')
     place('Madison',-300,-200)
 
+    # Use the randomly chosen key in the write_story function
+    word_bubble(110,'CadetBlue4')
+    write_story(story_dict=Flight_Quality_Randomizer, key=random_flight, size=12, x=-280, y=325, pen_color='white')
+
 # LEVEL 4
-trip_outcome = textinput("User Input",Level_4_storyline,"Outcome_Option", 12, -280, 280, 'white')
+trip_outcome = textinput("User Input",Level_4_storyline["Outcome_Option"])
 
 red_page()
 if trip_outcome == "1":

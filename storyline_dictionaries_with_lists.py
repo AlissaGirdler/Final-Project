@@ -280,7 +280,7 @@ Level_3_couples_adventure_storyline = {
             2. on a safari\n\
         Enter your choice:",
 
-    "Level_3_Couples_Adventure_Shark_Diving_Response:" : [
+    "Level_3_Couples_Adventure_Shark_Diving_Response" : [
         "Face to face with sharks, Taylor and her partner",
         "feel an adrenaline rush like never before!",
         "but...they would be happy to",

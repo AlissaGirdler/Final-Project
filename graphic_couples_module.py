@@ -65,7 +65,7 @@ def domestic_couple():
         blank_page()
 
         word_bubble(110,'IndianRed4')
-        write_story(Level_3_couples_romantic_storyline,"Level_3_Couples_Romantic_Good_Weather_Response",12,-280,280, 'white')
+        write_story(Level_3_couples_romantic_storyline,"Level_3_Couples_Romantic_Good_Weather_Response",12,-280,270, 'white')
         activity("Wine Sun",50,-50)
 
     else:

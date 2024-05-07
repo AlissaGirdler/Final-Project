@@ -14,7 +14,7 @@ def girls_getaway():
     write_story(Level_1_Storyline,"Level_1_Girls_Option_Response",12,-280,315,'white')
 
 
-    choice = input(Level_2_Girls_storyline["Level_2_serene/wild_option"])
+    choice = textinput("User Input", Level_2_Girls_storyline["Level_2_serene/wild_option"])
 
     if choice == "1":
         serene_girls()
