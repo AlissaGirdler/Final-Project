@@ -1,6 +1,7 @@
 weather = ['cloudy','rainy','sunny']
 
 Locations = {
+    "UW" : "Location Photos/UW.gif",
     "Madison": "Location Photos/7.gif",
     "Outer Banks": "Location Photos/1.gif",
     "Tokyo": "Location Photos/2.gif",

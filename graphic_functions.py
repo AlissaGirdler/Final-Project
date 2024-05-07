@@ -27,7 +27,16 @@ def blank_page():
         right(90)
     end_fill()
 
-
+def red_page():
+    setheading(0)
+    speed(0), penup(), goto(-500,400), pendown(), fillcolor('red3')
+    begin_fill()
+    for i in range(2):
+        forward(1000)
+        right(90)
+        forward(800)
+        right(90)
+    end_fill()
 ##################################### WRITE STORY ####################################
 
 # Draws word bubble
@@ -187,7 +196,7 @@ def return_flight(radius, color):
     distance = 2 * math.pi * radius / 360
 
     penup()
-    goto(300, -145)  # Start from the right side
+    goto(500, -145)  # Start from the right side
     pendown()
     setheading(120)  # Set heading to the left
 
@@ -349,7 +358,7 @@ def road_trip(length):
 
 def return_road_trip(length):
     penup()
-    goto(300,-160)
+    goto(500,-160)
     pendown()
     setheading(180)
 
@@ -759,5 +768,3 @@ def notebook():
         forward(400)
         
         y -= line_height
-
-
