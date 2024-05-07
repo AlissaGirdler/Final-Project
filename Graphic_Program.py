@@ -81,7 +81,7 @@ else:
 
     # Use the randomly chosen key in the write_story function
     word_bubble(110,'CadetBlue4')
-    write_story(story_dict=Flight_Quality_Randomizer, key=random_flight, size=12, x=-280, y=325, pen_color='white')
+    write_story(story_dict=Flight_Quality_Randomizer, key=random_flight, size=12, x=-280, y=275, pen_color='white')
 
 # LEVEL 4
 trip_outcome = textinput("User Input",Level_4_storyline["Outcome_Option"])
