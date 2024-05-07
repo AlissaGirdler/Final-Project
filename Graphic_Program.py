@@ -16,7 +16,7 @@ bubble_y = 375
 formatting()
 
 # INTRODUCTION
-#introduction()
+introduction()
 
 # LEVEL 1 
 write_story(Level_1_Storyline,"Level_1_Introduction", 20, 0, 20,'white')
