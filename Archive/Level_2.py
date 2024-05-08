@@ -1,6 +1,6 @@
 import math
 import random
-from storyline_dictionaries import *
+from Archive.storyline_dictionaries import *
 from other_dictionaries_and_lists import *
 from Archive.Level_1 import *
 
